@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page show" id="page1">
+        <div class="container content">
+            <h1>Happy Birthday <br>SUAR...❤️</h1>
+            <p>Krishna ji always bless you brooo.🙌🏻 May your day fullfill with lots of happiness and joy.💜 <br>Party
+                hard..🥂</p>
+
+            <button class="btn" onclick="showCake()">Let's Celebrate..😉</button>
+        </div>
+    </div>
+    <!-- Balloons -->
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+    <div class="balloon b5"></div>
+    <div class="balloon b6"></div>
+
+    <div class="page" id="page2" style="display:none;">
+        <div class="container content">
+            <p>Click kar cake per cut krne k liye..😏</p>
+
+            <img src="gifs/cake.gif" class="cake" onclick="cutCake()">
+
+            <button id="nextBtn" class="btn" style="display:none;" onclick="goToGift()">
+                See Your Gift..
+            </button>
+        </div>
+    </div>
+
+    <div id="page3" class="page" style="display:none;">
+        <div class="gift-container content">
+
+            <div class="gift-container animate">
+
+                <h2 class="gift-title">Ye rha Gift..🎁</h2>
+
+                <img src="gifs/gif.gif" id="giftBox" class="gift-img" onclick="openGift()">
+
+                <p class="gift-text">Click kar gift per kholne k liye..✨</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page4" class="page" style="display:none;">
+        <div class="final-page content">
+
+            <div class="photo-container animate">
+                <img src="image2.jfif" class="photo">
+                <img src="image.jfif" class="photo">
+                <img src="image3.jfif" class="photo">
+            </div>
+
+            <p> Sabse phle thankkk
+                youuu sooo muchhh..❤️ mera iitna acha dost banne k liye..😁 <br> and you are one of them jinke sath mein
+                apni baat share kar sakti hu bina kuch soche..✨ <br> or sorryy mujhe pta h mera behavior bht
+                change ho chuka h fir bhi mere sath friendship rkhne k liye..🙂 <br> or meri baat ko apne khaas dosto se
+                chupane k liye..🙂 <br>I am glad to have a friend like you in my life..😁 <br>Sooooooo thankkk youuu soo
+                muchhh broooo forrr everythingg..❤️ <br> and I hope ye friendship ese he rhe..😁🤞🏻<br> and It is your
+                birthday
+                so party hard mere ko online pay kar dena party k liyee..😎🥂 </p>
+            <p class="final-text animate">Enjoy your special day..😄 <br> Have a great funn..😉 <br>Once again
+                Happpyyyyy Birthhhdayyy Anshdeee..❤️🥰</p>
+
+        </div>
+    </div>
+    <canvas id="confetti"></canvas>
+    <audio id="bgMusic" loop>
+        <source src="song1.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+
+</html>

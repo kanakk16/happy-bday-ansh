@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ad5356, #c28776, #cd49a8, #556c96);
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text */
+.container {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 65px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #cdb1b7;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+/* 🎈 REALISTIC BALLOONS */
+.balloon {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  border-radius: 50% 50% 45% 45%;
+
+  box-shadow: inset -8px -12px 15px rgba(0,0,0,0.2),
+              inset 10px 10px 20px rgba(255,255,255,0.4),
+              0 10px 20px rgba(0,0,0,0.2);
+
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.b1 { animation-duration: 4s; }
+.b2 { animation-duration: 5s; }
+.b3 { animation-duration: 3.5s; }
+.b4 { animation-duration: 4.5s; }
+.b5 { animation-duration: 5.5s; }
+.b6 { animation-duration: 4.2s; }
+
+/* Shine effect */
+.balloon::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 15px;
+  height: 25px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+/* String */
+.balloon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: transparent;
+  border-left: 2px solid white;
+  border-radius: 50%;
+  
+  animation: wave 2s infinite ease-in-out alternate;
+}
+
+@keyframes wave {
+  0% { transform: translateX(-50%) rotate(5deg); }
+  100% { transform: translateX(-50%) rotate(-5deg); }
+}
+
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-120vh);}
+}
+
+.b1 { top: 10%; left: 8%; background: radial-gradient(circle at 30% 30%, #ff9aa2, #ff4d6d);}
+.b2 { top: 20%; right: 10%; background: radial-gradient(circle at 30% 30%, #ffd6a5, #ff9f1c);}
+.b3 { bottom: 15%; left: 15%; background: radial-gradient(circle at 30% 30%, #cdb4db, #845ec2);}
+.b4 { bottom: 10%; right: 12%; background: radial-gradient(circle at 30% 30%, #a0e7e5, #00c9a7);}
+.b5 { top: 50%; left: 2%; background: radial-gradient(circle at 30% 30%, #ffafcc, #ff5d8f);}
+.b6 { top: 55%; right: 3%; background: radial-gradient(circle at 30% 30%, #bde0fe, #4d96ff);}
+
+.cake {
+  width: 200px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+
+  display: block;        /* 🔥 IMPORTANT */
+  margin-left: auto;
+  margin-right: auto;    /* center bhi ho jayega */
+}
+
+.cake:hover {
+  transform: scale(1.1);
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#nextBtn {
+  margin-top: 20px;
+  display: block;        /* 🔥 IMPORTANT */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gift-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.gift-title {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.gift-text {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* 🎁 Gift Image */
+.gift-img {
+  width: 180px;
+  margin: 30px 0;
+  cursor: pointer;
+
+  animation: floatGift 2.5s ease-in-out infinite;
+  transition: 0.3s;
+
+  filter: drop-shadow(0 0 15px rgba(255, 200, 150, 0.7));
+}
+
+.gift-img:hover {
+  transform: scale(1.1);
+}
+
+/* Floating animation */
+@keyframes floatGift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+
+#page4 {
+  height: 100vh;
+  overflow-y: auto;
+  display: block !important;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.show {
+  display: flex;
+}
+
+.final-page {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.final-title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #d8a7ff;
+}
+
+/* photos row */
+.photo-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* photo style */
+.photo {
+  width: 180px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: black;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+/* tilt effect (like your image 😏) */
+.photo:nth-child(1) {
+  transform: rotate(-8deg);
+}
+.photo:nth-child(2) {
+  transform: rotate(0deg);
+}
+.photo:nth-child(3) {
+  transform: rotate(8deg);
+}
+
+.photo:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.final-text {
+  margin-top: 30px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.content {
+  will-change: transform, opacity;
+}
+
+.page.show .content {
+  animation: smoothEntry 1.5s ease forwards;
+}
+
+.page.hide .content {
+  animation: slideUpExit 1.5s ease forwards;
+}
+
+@keyframes smoothEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideUpExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+/* Page 2,3,4 ke liye handwritten style */
+#page2,
+#page3,
+#page4 {
+  font-family: 'Caveat', cursive;
+}
+
+#page2 h2,
+#page3 h2,
+#page4 h2 {
+  font-size: 40px;
+}
+
+#page2 p,
+#page3 p,
+#page4 p {
+  font-size: 32px;
+}
